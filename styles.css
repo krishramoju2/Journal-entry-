@@ -1,0 +1,196 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #2c3e50;
+}
+
+.api-key-section, .firebase-config {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.api-key-section input, #firebaseConfig {
+  padding: 8px;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#firebaseConfig {
+  height: 150px;
+  font-family: monospace;
+}
+
+.api-key-section button, .firebase-config button, #submitEntryBtn {
+  padding: 8px 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.api-key-section button:hover, .firebase-config button:hover, #submitEntryBtn:hover {
+  background-color: #2980b9;
+}
+
+.hidden {
+  display: none;
+}
+
+#keySavedMessage {
+  color: #27ae60;
+}
+
+.journal-form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.journal-form h2 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+#journalEntry {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+
+#submitEntryBtn {
+  padding: 10px 15px;
+  background-color: #2ecc71;
+}
+
+#submitEntryBtn:hover {
+  background-color: #27ae60;
+}
+
+#submitEntryBtn:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+#loadingIndicator {
+  margin-top: 10px;
+  color: #7f8c8d;
+}
+
+.journal-list h2 {
+  color: #2c3e50;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #3498db;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.timeline-date {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #7f8c8d;
+}
+
+.timeline-content {
+  margin-left: 20px;
+}
+
+.mood-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.entry-text {
+  white-space: pre-wrap;
+  margin-bottom: 10px;
+}
+
+.entry-summary {
+  font-style: italic;
+  color: #7f8c8d;
+}
+
+/* Mood-specific colors */
+.mood-happy {
+  background-color: #f1c40f;
+  color: white;
+}
+
+.mood-sad {
+  background-color: #3498db;
+  color: white;
+}
+
+.mood-neutral {
+  background-color: #bdc3c7;
+  color: #333;
+}
+
+.mood-anxious {
+  background-color: #9b59b6;
+  color: white;
+}
+
+.mood-excited {
+  background-color: #e74c3c;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #7f8c8d;
+  font-size: 0.9em;
+}

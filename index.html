@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Journal App</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>AI-Powered Journal</h1>
+      <div class="api-key-section">
+        <input type="password" id="apiKeyInput" placeholder="Enter your OpenAI API key">
+        <button id="saveKeyBtn">Save Key</button>
+        <span id="keySavedMessage" class="hidden">Key saved!</span>
+      </div>
+      <div class="firebase-config">
+        <h3>Firebase Configuration</h3>
+        <textarea id="firebaseConfig" placeholder='Paste your Firebase config here:
+{
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
+}'></textarea>
+        <button id="initFirebaseBtn">Initialize Firebase</button>
+      </div>
+    </header>
+    
+    <main>
+      <div class="journal-form">
+        <h2>New Journal Entry</h2>
+        <div id="formError" class="error hidden"></div>
+        <textarea id="journalEntry" placeholder="Write your thoughts here..." rows="6"></textarea>
+        <button id="submitEntryBtn">Save Entry</button>
+        <div id="loadingIndicator" class="hidden">Processing...</div>
+      </div>
+      
+      <div class="journal-list">
+        <h2>Your Journal Timeline</h2>
+        <div id="entriesContainer">
+          <p id="noEntriesMessage">No entries yet. Write your first journal entry above!</p>
+          <div id="timeline" class="timeline"></div>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <p>Your journal entries are securely stored in Firebase.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
